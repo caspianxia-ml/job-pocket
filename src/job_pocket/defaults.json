@@ -1,0 +1,30 @@
+{
+  "start_url": "https://www.zhipin.com/web/geek/job-recommend",
+  "min_delay": 8.0,
+  "max_delay": 15.0,
+  "rest_every": 20,
+  "rest_seconds": 60.0,
+  "max_rounds": 80,
+  "idle_rounds": 3,
+  "timeout_ms": 20000,
+  "render_wait_seconds": 2.0,
+  "selectors": {
+    "feed_roots": [".job-list-box", ".rec-job-list", ".recommend-job-list", ".job-list"],
+    "cards": [".job-card-wrapper", ".job-card-box", ".job-card"],
+    "link": ["a.job-card-left[href*='/job_detail/']", "a[href*='/job_detail/']"],
+    "title": [".job-name", ".job-title"],
+    "salary": [".salary", ".job-salary"],
+    "location": [".job-area", ".job-location"],
+    "requirements": [".job-info .tag-list li", ".job-card-left .tag-list li", ".job-limit li"],
+    "skills": [".job-card-footer .tag-list li", ".job-labels li"],
+    "company": [".company-name"],
+    "company_info": [".company-tag-list li", ".company-info .tag-list li"],
+    "benefits": [".info-desc", ".company-benefits"],
+    "jd": [".job-sec-text", ".job-detail .text", "[data-testid='job-description']"],
+    "address": [".job-location .location-address", ".location-address", ".job-address"],
+    "detail_title": [".job-banner .name h1", ".job-banner h1", "h1"],
+    "risk_visible": [".geetest_panel", ".geetest_holder", ".yidun_modal", ".nc-container", "iframe[src*='captcha']", "iframe[src*='verify']", "[data-testid='risk-dialog']"],
+    "login_visible": [".login-dialog", ".sign-wrap", ".login-register"]
+  },
+  "risk_phrases": ["访问过于频繁", "操作过于频繁", "请求过于频繁", "访问异常", "安全验证", "请完成验证", "拖动滑块", "点击进行验证", "账号异常", "账号被冻结", "您的访问行为异常", "当前访问受限"]
+}
