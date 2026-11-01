@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-pocket-assistant"
+version = "0.1.0"
+description = "个人求职信息整理助手：BOSS 直聘可见推荐岗位，本地整理与导出"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["playwright>=1.48,<2", "openpyxl>=3.1.5,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+job-pocket = "job_pocket.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+job_pocket = ["*.json", "*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["browser: 本地合成页面浏览器测试，使用 --run-browser 启用"]

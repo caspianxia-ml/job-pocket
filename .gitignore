@@ -1,0 +1,22 @@
+# 浏览器凭据、个人岗位与本地配置永不提交
+.private/
+data/
+exports/
+config.local.json
+*.sqlite*
+*.db
+*.csv
+*.xlsx
+*.log
+.env
+.env.*
+playwright/.auth/
+# Python / tools
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.DS_Store
